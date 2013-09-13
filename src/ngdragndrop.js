@@ -152,7 +152,7 @@ var dragndrop = angular.module('DragAndDrop', [])
                 canDropHere = (dropOn.indexOf(dropId) != -1); // Is dropId in the list of dropOn : where this element wants to be dragged only
               else if (angular.isString(dropOn) || angular.isNumber(dropOn))
                 canDrophere = (dropOn == dropId);
-            console.log(canDropHere, dropId, dropOn);
+            
             if (!canDropHere)
               return false; // This cannot be dropped here.
             
@@ -161,7 +161,7 @@ var dragndrop = angular.module('DragAndDrop', [])
               data = originalEv.dataTransfer.files;
             else
               data = angular.fromJson(originalEv.dataTransfer.getData('text/html'));
-            console.log(data);
+            
             // uset onDrop defined function
             if (angular.isFunction(userOnDrop))
               userOnDrop(data, ev);
