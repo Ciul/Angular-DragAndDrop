@@ -7,7 +7,7 @@
  * Provides an angular module with draggable and droppable directives
  * using HTML5 drag&drop capabilities.
  */
-(function(window, angular, undefined) {
+(function(window, angular, jQuery, undefined) {
 
 var dragndrop = angular.module('DragAndDrop', [])
   
@@ -49,7 +49,7 @@ var dragndrop = angular.module('DragAndDrop', [])
           
           // DragStart
           element.bind('dragstart', function(ev) {
-            var originalEv = ev.originalEvent;
+            var originalEv = jQuery ? ev.originalEvent : ev;
             
             if (!!dragImage) {
               // This requires an image element to be created
@@ -142,7 +142,7 @@ var dragndrop = angular.module('DragAndDrop', [])
           element.bind('drop', function(ev) {
             ev.stopPropagation(); // Stop some browsers from redirecting
             ev.preventDefault();
-            var originalEv  = ev.originalEvent,
+            var originalEv  = jQuery ? ev.originalEvent : ev,
                 canDropHere = true; // Flag to verify if this element can be dropped here
             
             // Verify this element can be dropped here
@@ -176,4 +176,4 @@ var dragndrop = angular.module('DragAndDrop', [])
   
   ;
 
-})(window, window.angular);
+})(window, window.angular, window.jquery);
