@@ -46,7 +46,7 @@ This comes with a cost:
 In the controller, you will need to use angular.bind or keeping a variable to reference controlelr $scope  
 since inside the dragging methods you subscribe, they will be called with a different binding.
 
-## jQuery -- free--
+### jQuery -- free--
 
 You might see the word jQuery in the module but in fact, that's needed to make it work with/without jQUery presence. It depends on Angular.element.  
 What happens is that if jQuery is present, the bound events will have the dragging real event on the 'originalEvent' property  
