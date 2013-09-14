@@ -114,7 +114,7 @@ var dragndrop = angular.module('DragAndDrop', [])
           // DragEnter
           element.bind('dragenter', function(ev) {
             
-            // uset onDragEnter defined function
+            // user onDragEnter defined function
             if (angular.isFunction(userOnDragEnter))
               userOnDragEnter(ev);
           });

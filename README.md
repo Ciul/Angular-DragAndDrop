@@ -38,3 +38,11 @@ dropId:         on-drop-id:        string        This identifies uniquely this d
 onDragEnter:    on-drag-enter:     function
 onDragOver:     on-drag-over:      function
 onDrop:         on-drop:           function
+
+
+Scoping
+-------
+
+The draggable and droppable directives don't have an isolated scope as might be expected.
+This is done by design because if an isolated scope was set, then inner elements containg the directive wouldn't reach parent scope,
+giving undesired results if for example when the directive is being used with a ng-repeat.
