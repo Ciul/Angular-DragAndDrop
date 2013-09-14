@@ -48,7 +48,8 @@ since inside the dragging methods you subscribe, they will be called with a diff
 
 ### jQuery -- free--
 
-You might see the word jQuery in the module but in fact, that's needed to make it work with/without jQUery presence. It depends on Angular.element.  
+You might see the word jQuery in the module but in fact, that's needed to make it work with/without jQuery presence.  
+It depends on Angular.element.  
 What happens is that if jQuery is present, the bound events will have the dragging real event on the 'originalEvent' property  
 thus the 'dataTransfer' property wiil be on event if jQUery is not present and on 'event.originalEvent' if it is,  
 then, for sake of being NO jQuery depending it is being checked and pointing the right event properties.
