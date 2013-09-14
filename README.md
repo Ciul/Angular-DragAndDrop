@@ -1,13 +1,13 @@
 Angularjs-DragAndDrop
 =====================
 
-And Angularjs module to implement HTML5 Dran And Drop behavior.
+And Angularjs module to implement HTML5 Drag And Drop behavior.
 
 ### DEMO
 http://plnkr.co/edit/Y3C6QUPgAuT3ZkA3bDyB?p=preview
 
 
-### READ ABOUT HTML5 DRag&DROP (be curious)
+### Read abou HTML5 Drag&Drop (be curious)
 For better understanding, read at:
 https://developer.mozilla.org/en-US/docs/DragDrop/Drag_and_Drop
 
