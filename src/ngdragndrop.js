@@ -147,6 +147,7 @@ var dragndrop = angular.module('DragAndDrop', [])
             
             // Verify this element can be dropped here
             var dropOn = angular.fromJson(originalEv.dataTransfer.getData('dropOn'));
+            
             if (!!dropId && !!dropOn)
               if (angular.isArray(dropOn))
                 canDropHere = (dropOn.indexOf(dropId) != -1); // Is dropId in the list of dropOn : where this element wants to be dragged only
