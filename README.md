@@ -36,8 +36,19 @@ It supports the following attributes:
 * onDrop:         on-drop:           function  
 
 
-#### Scoping
+### Scoping
 
 The draggable and droppable directives don't have an isolated scope as might be expected.  
 This is done by design because if an isolated scope was set, then inner elements containg the directive wouldn't reach parent scope,  
 giving undesired results if for example when the directive is being used with a ng-repeat.  
+
+This comes with a cost:  
+In the controller, you will need to use angular.bind or keeping a variable to reference controlelr $scope  
+since inside the dragging methods you subscribe, they will be called with a different binding.
+
+## jQuery -- free--
+
+You might see the word jQuery in the module but in fact, that's needed to make it work with/without jQUery presence. It depends on Angular.element.  
+What happens is that if jQuery is present, the bound events will have the dragging real event on the 'originalEvent' property  
+thus the 'dataTransfer' property wiil be on event if jQUery is not present and on 'event.originalEvent' if it is,  
+then, for sake of being NO jQuery depending it is being checked and pointing the right event properties.
