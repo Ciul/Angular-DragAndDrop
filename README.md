@@ -11,7 +11,7 @@ http://plnkr.co/edit/Y3C6QUPgAuT3ZkA3bDyB?p=preview
 For better understanding, read at:
 https://developer.mozilla.org/en-US/docs/DragDrop/Drag_and_Drop
 
-### DRAGGABLE :: directive
+### Draggable :: directive
 
 Draggable attribute must contain the model which will be passed to the droppable.
 e.g <div data-draggable="myModel">
@@ -27,7 +27,7 @@ It supports the following attributes as well:
 * onDragEnd:      on-drag-end:    function  
 
 
-### DROPPABLE
+### Droppable :: directive
 
 It supports the following attributes:
 * dropId:         on-drop-id:        string        This identifies uniquely this droppable, in such a way that draggables containing it in array or string format, will be able to drop in it.  
